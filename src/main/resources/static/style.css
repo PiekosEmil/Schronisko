@@ -1,0 +1,8 @@
+* {
+    font-family: "Tahoma";
+}
+.header {
+    display: grid;
+    background-color: lightgray;
+    border-color: gray;
+}
