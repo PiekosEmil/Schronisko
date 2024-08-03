@@ -2,7 +2,30 @@
     font-family: "Tahoma";
 }
 .header {
-    display: grid;
-    background-color: lightgray;
-    border-color: gray;
+    background: lightgray;
+    padding: 30px;
+}
+
+.content {
+    margin-left: 30px;
+    margin-right: 100px;
+}
+
+img {
+    height: 100px;
+}
+
+.animal {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.animal-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.description-from-type-label {
+    margin-left: 20px;
 }

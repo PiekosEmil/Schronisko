@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Rudy</title>
+  <link rel="stylesheet" type="text/css" href="../static/style.css" th:href="style.css"/>
+</head>
+<body>
+  <div class="header">
+    <h1>Friendly shelter</h1>
+  </div>
+  <div class="content">
+  <h2 th:text="${name}">Name of animal</h2>
+  <p th:text="${description}">Animal description</p>
+  </div>
+  <p><a href="/">Home</a></p>
+</body>
+</html>
