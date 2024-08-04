@@ -16,9 +16,12 @@
         <div class="categories">
             <span>Categories:</span>
             <a th:href="@{/}" th:text="All"/>
-            <a th:href="@{'/filter?category=cat'}" th:text="Cats"/>
-            <a th:href="@{'/filter?category=dog'}" th:text="Dogs"/>
-            <a th:href="@{'/filter?category=other'}" th:text="Others"/>
+            <a th:href="@{'/?category=cat'}" th:text="Cats"/>
+            <a th:href="@{'/?category=dog'}" th:text="Dogs"/>
+            <a th:href="@{'/?category=other'}" th:text="Others"/>
+        </div>
+        <div class="adding-animal">
+            <a th:href="@{'/add'}">Add animal</a>
         </div>
         <h2>Animals looking for new home</h2>
         <div th:each="animal: ${animals}" class="animal">
@@ -26,7 +29,7 @@
                 <img th:src="${animal.getImage()}"/>
                     <div class="description-from-type-label">
                     <h2 th:text="${animal.getName()}"/>
-                    <p th:text="${animal.getDescription().substring(0, 101)}"></p>
+                    <p th:text="${animal.shortDescription(animal.getDescription())}"></p>
                     </div>
             </a>
         </div>

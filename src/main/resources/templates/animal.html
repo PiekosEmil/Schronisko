@@ -9,10 +9,13 @@
   <div class="header">
     <h1>Friendly shelter</h1>
   </div>
-  <div class="content">
-  <h2 th:text="${name}">Name of animal</h2>
-  <p th:text="${description}">Animal description</p>
+  <div class="links">
+    <span><a href="/">Home</a></span>
+    <span><a th:href="'/edit?name=' + ${name}">Edit</a></span>
   </div>
-  <p><a href="/">Home</a></p>
+  <div class="content">
+    <h2 th:text="${name}">Name of animal</h2>
+    <p th:text="${description}">Animal description</p>
+  </div>
 </body>
 </html>

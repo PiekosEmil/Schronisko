@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Rudy</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" th:href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="header">
+    <h1>Friendly shelter</h1>
+</div>
+<p style="margin-left: 20px"><a href="/">Home</a></p>
+<form style="padding: 20px" action="/edit_animal" method="post" th:object="${animal}">
+    <div class="form-group">
+        <label>Animal name</label>
+        <input type="text" class="form-control" placeholder="Example animal name" th:field="*{name}">
+    </div>
+    <div class="form-group">
+        <label for="category">Kategoria</label>
+        <select class="form-control" id="category" th:field="*{category}">
+            <option th:value="${cat}" th:text="Cat"></option>
+            <option th:value="${dog}" th:text="Dog"></option>
+            <option th:value="${other}" th:text="Other"></option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="description">Animal description</label>
+        <textarea class="form-control" id="description" rows="3" th:field="*{description}"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Image URL</label>
+        <input type="text" class="form-control" placeholder="http://www.example.image.url/" th:field="*{image}">
+    </div>
+    <div>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </div>
+</form>
+</body>
+</html>

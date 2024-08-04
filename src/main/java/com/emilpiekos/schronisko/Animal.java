@@ -44,4 +44,12 @@ public class Animal {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public String shortDescription(String description) {
+        if (description.length() > 100) {
+            return description.substring(0, 100) + "...";
+        } else {
+            return description;
+        }
+    }
 }

@@ -55,4 +55,12 @@ public class AnimalRepository {
     public Set<Animal> filterByCategory(String category) {
         return animals.stream().filter(animal -> animal.getCategory().convertEnumToString().equals(category)).collect(Collectors.toSet());
     }
+
+    public void add(Animal animal) {
+        animals.add(animal);
+    }
+
+    public void remove(Animal animal) {
+        animals.remove(animal);
+    }
 }

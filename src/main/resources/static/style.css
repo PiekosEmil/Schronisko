@@ -7,8 +7,14 @@
 }
 
 .content {
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: 100px;
+    background: lightgray;
+}
+
+.links {
+    padding: 20px;
+    background: slategray;
 }
 
 img {
